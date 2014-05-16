@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_alignParentTop="true"
+        layout="@layout/title_bar_lay" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ExpandableListView
+            android:id="@+id/friends_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/darkgray"
+            android:dividerHeight="1dp" />
+
+        <RelativeLayout
+            android:id="@+id/friend_group_top"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip"
+            android:background="@android:color/white"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/friend_group_top_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/friend_group_browser2" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/friend_group_top_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_toRightOf="@+id/friend_group_top_browser"
+                android:text="同时"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
